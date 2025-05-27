@@ -336,7 +336,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                     <ul className="space-y-4">
                       {userFeedbacks.map((item, index) => (
                         <li key={index} className="border h-86 p-4 rounded">
-                          <p className="text-sm lg:text-base">
+                          <p className="text-lg lg:text-base">
                             <span className="font-semibold ">Department:</span>{" "}
                             {item.category}
                           </p>
