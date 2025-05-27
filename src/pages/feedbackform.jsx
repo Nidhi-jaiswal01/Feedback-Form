@@ -117,8 +117,7 @@ const handleSubmit = async (e) => {
 
 //---------------------------//
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
-          
+    <div className="w-full">     
     {/* --- Navbar --- */}
     <nav className="bg-gray-800 text-white px-4 py-2 rounded mb-6 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between ">

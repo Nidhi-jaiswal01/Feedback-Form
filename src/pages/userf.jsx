@@ -70,7 +70,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
 
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="w-full">
       <nav className="bg-gray-800 text-white px-4 py-2 rounded mb-6 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between ">
           {/* Logo / Brand */}
@@ -340,47 +340,62 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                             <span className="font-semibold ">Department:</span>{" "}
                             {item.category}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
+                          <p className="mt-2 text-sm lg:text-base">
                             <span className="font-semibold ">Email:</span>{" "} {item.email}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
+                          <p className="mt-2 text-sm lg:text-base">
                             <span className="font-semibold">Name:</span>{" "}{item.name}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
-                            <span className="font-semibold">
-                              How are the food services in the company?:
-                            </span>{" "}
-                            {item.foodService}
-                          </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
-                            <span className="font-semibold">
+                          <p className="mt-2 text-sm lg:text-base">
+                      <span className="font-semibold hidden md:inline">
+                       How are the food services in the company?:
+                       </span>
+                       <span className="font-semibold md:hidden">
+                        Food Services:
+                         </span>{" "}
+
+                        {item.foodService}
+                        </p>
+                           <p className="mt-2 text-sm lg:text-base">
+                      <span className="font-semibold hidden md:inline">
                               How do you feel about the level of recognition you receive
                               for your contributions?:
-                            </span>{" "}
+                            </span>
+                            <span className="font-semibold md:hidden">
+                        level of Recognition:
+                         </span>{" "}
                             {item.recognition}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
-                            <span className="font-semibold">
+                          <p className="mt-2 text-sm lg:text-base">
+                      <span className="font-semibold hidden md:inline">
                               How would you rate the company's commitment to diversity
                               and inclusion?:
-                            </span>{" "}
+                            </span><span className="font-semibold md:hidden">
+                        company's commitment to diversity?:
+                         </span>{" "}
                             {item.diversity}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
-                            <span className="font-semibold">
+                           <p className="mt-2 text-sm lg:text-base">
+                      <span className="font-semibold hidden md:inline">
                               How would you rate the leadership provided by senior
                               management?:
-                            </span>{" "}
+                            </span>
+                            <span className="font-semibold md:hidden">
+                        Leadership Provided?:
+                         </span>{" "}
                             {item.leadership}
                           </p>
-                          <p className="mt-1.5 text-sm lg:text-base">
-                            <span className="font-semibold">
+                          <p className="mt-2 text-sm lg:text-base">
+                      <span className="font-semibold hidden md:inline">
                               How effective is the communication within your team and
                               across the company?:
-                            </span>{" "}
+                            </span>
+                            <span className="font-semibold md:hidden">
+                        communication accross the company:
+                         </span>{" "}
                             {item.communication}
                           </p>
-                          <p className="mr-1 text-sm lg:text-base">
+                          <p className="mt-2 text-sm lg:text-base">
                             <span className="font-semibold">Message:</span>{" "}
                             {item.message}
                           </p>

@@ -84,7 +84,7 @@ function Account() {
 
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="w-full">
       <nav className="bg-gray-800 text-white px-4 py-2 rounded mb-6 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between ">
           {/* Logo / Brand */}
@@ -294,7 +294,7 @@ function Account() {
   <div className="flex flex-col w-full md:w-1/4 gap-4">
     {/* First Gray Box */} 
     <div className="bg-gray-800 text-orange-50 p-6 rounded-md shadow-md flex justify-center items-center text-center">
-        <img src="/account.png" alt="Company Logo" className="h-13 mr-3 w-auto"/>
+        <img src="/account.png" alt="Company Logo" className="h-10 md:h-13 mr-3 w-auto"/>
         <div>
       <h3 className="font-semibold text-sm">Welcome Back!</h3>
       <p className="font-semibold text-sm">
