@@ -329,7 +329,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
   </div>
 
   {/* Right Orange Box */}
-  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md">
+  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto overflow-x-auto">
                   {feedbacks.length === 0 ? (
                     <p className="text-gray-500">No feedback submitted yet.</p>
                   ) : (
