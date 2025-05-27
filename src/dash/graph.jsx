@@ -192,7 +192,7 @@ useEffect(() => {
         {/* Charts */}
         <div className="overflow-y-auto relative gap-6 p-4">
           {Object.entries(pieChartData).map(([field, data], idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div key={idx} className="bg-white rounded-lg shadow-md py-3 px-1 mb-6">
               <h2 className="text-lg font-semibold text-center mb-2 capitalize">{fieldLabels[field] || field}</h2>
               <ResponsiveContainer width="100%" height={360}>
                 <PieChart>
