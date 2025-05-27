@@ -329,14 +329,14 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
   </div>
 
   {/* Right Orange Box */}
-  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto overflow-x-auto">
+  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto h-86">
                   {feedbacks.length === 0 ? (
                     <p className="text-gray-500">No feedback submitted yet.</p>
                   ) : (
                     <ul className="space-y-4">
                       {userFeedbacks.map((item, index) => (
-                        <li key={index} className="border h-86 p-4 rounded">
-                          <p className="text-lg lg:text-base">
+                        <li key={index} className="border p-4 rounded">
+                          <p className="text-sm lg:text-base">
                             <span className="font-semibold ">Department:</span>{" "}
                             {item.category}
                           </p>

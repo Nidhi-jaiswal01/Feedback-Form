@@ -247,8 +247,8 @@ const handleSubmit = async (e) => {
 
     {/* --- Feedback Form Card --- */}
 <div className="w-full bg-gray-800 py-5 rounded">
-  <h1 className="text-lg sm:text-xl md:text-2xl flex font-bold mb-2 text-left ml-11 text-white ">Employee Feedback Form<img src="/clipboard-pen-line.png" alt="icon" className="h-8 w-8 ml-3 justify justify-between" /></h1>
-  <p className="mb-3 text-white ml-11">Please take a minute to provide your feedback about your recent experience in the company.</p>
+  <h1 className="text-lg sm:text-xl md:text-2xl flex font-bold mb-2 text-left mx-6 text-white ">Employee Feedback Form<img src="/clipboard-pen-line.png" alt="icon" className="h-8 w-8 ml-3 justify justify-between" /></h1>
+  <p className="mb-3 text-white mx-6 ">Please take a minute to provide your feedback about your recent experience in the company.</p>
 </div>
     <div className="w-full mx-auto bg-orange-50 p-6 sm:p-8 md:p-10 rounded shadow-md">
         <form onSubmit={handleSubmit}>
