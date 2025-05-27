@@ -345,9 +345,8 @@ function Account() {
   </div>
 
   {/* Right Orange Box */}
-  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md">
+  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto">
         <form>
-            
                   <div className="relative w-full mb-2">
                   <User className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
                   <input

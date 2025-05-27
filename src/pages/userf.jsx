@@ -275,7 +275,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
           </ul>
         )}
       </nav>
-      <div className="flex flex-col md:flex-row w-full gap-4 items-stretch">
+      <div className="flex flex-col md:flex-row w-full gap-4 ">
   {/* Left Section with Two Gray Boxes */}
   <div className="flex flex-col w-full md:w-1/4 gap-4">
     {/* First Gray Box */} 
@@ -329,7 +329,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
   </div>
 
   {/* Right Orange Box */}
-  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto ">
+  <div className="w-full md:w-full bg-orange-50 text-black p-6 rounded-md shadow-md overflow-y-auto h-99">
                   {feedbacks.length === 0 ? (
                     <p className="text-gray-500">No feedback submitted yet.</p>
                   ) : (
