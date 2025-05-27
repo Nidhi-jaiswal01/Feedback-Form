@@ -5,7 +5,7 @@ import { auth } from "./firebase";
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import FeedbackForm from "./pages/FeedbackForm";
+import FeedbackForm from "./pages/feedbackform";
 import Account from "./pages/account";
 import Userf from "./pages/userf";
 import Dashboard from "./dash/dashboard";
