@@ -282,8 +282,8 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
     <div className="bg-gray-800 text-orange-50 p-6 rounded-md shadow-md flex justify-center items-center text-center ">
         <img src="/account.png" alt="Company Logo" className="h-10 md:h-13 mr-3 w-auto"/>
         <div>
-      <h3 className="font-semibold text-sm  ">Welcome Back!</h3>
-      <p className="font-semibold text-sm ">
+      <h3 className="font-semibold ">Welcome Back!</h3>
+      <p className="font-semibold ">
          {Name}
     </p>
     </div>
@@ -336,17 +336,17 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                     <ul className="space-y-4">
                       {userFeedbacks.map((item, index) => (
                         <li key={index} className="border p-4 rounded">
-                          <p className="text-sm lg:text-base">
+                          <p>
                             <span className="font-semibold ">Department:</span>{" "}
                             {item.category}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2 ">
                             <span className="font-semibold ">Email:</span>{" "} {item.email}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2 ">
                             <span className="font-semibold">Name:</span>{" "}{item.name}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2 ">
                       <span className="font-semibold hidden md:inline">
                        How are the food services in the company?:
                        </span>
@@ -356,7 +356,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
 
                         {item.foodService}
                         </p>
-                           <p className="mt-2 text-sm lg:text-base">
+                           <p className="mt-2">
                       <span className="font-semibold hidden md:inline">
                               How do you feel about the level of recognition you receive
                               for your contributions?:
@@ -366,7 +366,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                          </span>{" "}
                             {item.recognition}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2">
                       <span className="font-semibold hidden md:inline">
                               How would you rate the company's commitment to diversity
                               and inclusion?:
@@ -375,7 +375,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                          </span>{" "}
                             {item.diversity}
                           </p>
-                           <p className="mt-2 text-sm lg:text-base">
+                           <p className="mt-2 ">
                       <span className="font-semibold hidden md:inline">
                               How would you rate the leadership provided by senior
                               management?:
@@ -385,7 +385,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                          </span>{" "}
                             {item.leadership}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2">
                       <span className="font-semibold hidden md:inline">
                               How effective is the communication within your team and
                               across the company?:
@@ -395,7 +395,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
                          </span>{" "}
                             {item.communication}
                           </p>
-                          <p className="mt-2 text-sm lg:text-base">
+                          <p className="mt-2 ">
                             <span className="font-semibold">Message:</span>{" "}
                             {item.message}
                           </p>

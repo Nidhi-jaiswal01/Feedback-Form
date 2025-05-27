@@ -296,8 +296,8 @@ function Account() {
     <div className="bg-gray-800 text-orange-50 p-6 rounded-md shadow-md flex justify-center items-center text-center">
         <img src="/account.png" alt="Company Logo" className="h-10 md:h-13 mr-3 w-auto"/>
         <div>
-      <h3 className="font-semibold text-sm">Welcome Back!</h3>
-      <p className="font-semibold text-sm">
+      <h3 className="font-semibold ">Welcome Back!</h3>
+      <p className="font-semibold ">
          {Name}
     </p>
     </div>

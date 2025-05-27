@@ -269,7 +269,7 @@ const handleSubmit = async (e) => {
   </select>
 </label>
 <label className="block mb-2">
-         <p className="mt- flex font-semibold"><img src="/id-card.png" alt="icon" className="h-6 w-6 mr-1 justify justify-between" /> Email:</p>
+         <p className="mt-7 flex font-semibold"><img src="/id-card.png" alt="icon" className="h-6 w-6 mr-1 justify justify-between" /> Email:</p>
           <input
             type="text"
             className="w-full p-2 border border-gray-300 rounded mt-1 bg-white"
@@ -278,7 +278,7 @@ const handleSubmit = async (e) => {
           />
         </label>
         <label className="block mb-2">
-         <p className="mt- flex font-semibold"><img src="/email.png" alt="icon" className="h-5 w-5 mr-1 justify justify-between" /> Name:</p>{""}
+         <p className="mt-7 flex font-semibold"><img src="/email.png" alt="icon" className="h-5 w-5 mr-1 justify justify-between" /> Name:</p>{""}
           <input
             type="text"
             className="w-full p-2 border border-gray-300 rounded mt-1 bg-white"
