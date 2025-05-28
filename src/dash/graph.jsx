@@ -190,9 +190,9 @@ useEffect(() => {
 
         <h1 className="ml-6 text-2xl sm:text-3xl font-semibold mb-2">Dashboard</h1>
         {/* Charts */}
-        <div className="overflow-y-auto relative gap-6 p-4">
+        <div className="overflow-y-auto relative p-4 w-full">
           {Object.entries(pieChartData).map(([field, data], idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-md py-3 px-1 mb-6">
+            <div key={idx} className="bg-white rounded-lg shadow-md py-3 px-1 mb-6 w-">
               <h2 className="text-lg font-semibold text-center mb-2 capitalize">{fieldLabels[field] || field}</h2>
               <ResponsiveContainer width="100%" height={360}>
                 <PieChart>
@@ -202,7 +202,7 @@ useEffect(() => {
                     cy="50%"
                     labelLine={false}
                     label={renderCustomizedLabel}
-                    outerRadius={100}
+                    outerRadius={90}
                     dataKey="value"
                   >
                     {data.map((_, index) => (
