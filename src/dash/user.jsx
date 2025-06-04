@@ -102,7 +102,7 @@ const [date, setDate] = useState("");
     : "w-16";
 
   return (
-    <div className="flex h-screen w-full bg-gray-100  relative overflow-hidden">
+    <div className="flex h-screen w-full bg-gray-100  absolute right-0 top-0 overflow-hidden">
   {/* Sidebar */}
     <div
     className={`fixed top-0 left-0 h-screen bg-gray-800 text-white z-50
@@ -164,7 +164,7 @@ const [date, setDate] = useState("");
       {/* Main content */}
      <div
   className={`flex-1 ml-0 ${
-    sidebarOpen ? (isMobile ? "" : "ml-59") : isMobile ? "" : "ml-14"
+    sidebarOpen ? (isMobile ? "" : "ml-64") : isMobile ? "" : "ml-16"
   } flex flex-col h-screen overflow-y-auto transition-all duration-300`}
 >
        
@@ -172,7 +172,7 @@ const [date, setDate] = useState("");
         <div className="flex items-center flex-none justify-between bg-white px-4 py-2 shadow-md rounded-lg mb-4">
           <div className="flex items-center">
             <button onClick={toggleSidebar} className="text-gray-700 mr-4">
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6 md:ml-5" />
             </button>
             <Link to="/admin-dashboard" className="flex items-center space-x-2 w-full mr-4 hover:text-gray-600">
                                     <span>Home</span>
@@ -184,9 +184,9 @@ const [date, setDate] = useState("");
           </div>
         </div>
 
-        <h1 className="ml-6 text-2xl sm:text-3xl font-semibold mb-2">Dashboard</h1>
+        <h1 className="ml-5 md:ml-10 text-2xl sm:text-3xl font-semibold mb-2 ">Dashboard</h1>
 
-<div className="overflow-x-auto max-w-screen mx-6 my-4">
+<div className="overflow-x-auto max-w-screen md:mx-10 mx-5 mt-4">
   <TableContainer component={Paper}>
        <div className="sm:min-w-[800px] min-w-[610px]  px-4 py-2">
       <h1 className="font-bold mb-2">User Profile</h1>

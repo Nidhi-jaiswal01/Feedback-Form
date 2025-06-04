@@ -80,7 +80,7 @@ function Dashboard() {
 
 
   return (
-    <div className="flex h-screen w-full bg-gray-100  relative overflow-hidden">
+    <div className="flex h-screen w-full bg-gray-100 absolute top-0 right-0 overflow-hidden">
   {/* Sidebar */}
     <div
     className={`fixed top-0 left-0 h-screen bg-gray-800 text-white z-50
@@ -142,7 +142,7 @@ function Dashboard() {
       {/* Main content */}
      <div
   className={`flex-1 ml-0 ${
-    sidebarOpen ? (isMobile ? "" : "ml-59") : isMobile ? "" : "ml-14"
+    sidebarOpen ? (isMobile ? "" : "ml-64") : isMobile ? "" : "ml-16"
   } flex flex-col h-screen overflow-y-auto transition-all duration-300`}
 >
        
@@ -150,7 +150,7 @@ function Dashboard() {
         <div className="flex items-center flex-none justify-between bg-white px-4 py-2 shadow-md rounded-lg mb-4">
           <div className="flex items-center">
             <button onClick={toggleSidebar} className="text-gray-700 mr-4">
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6 md:ml-5" />
             </button>
             <Link to="/admin-dashboard" className="flex items-center space-x-2 w-full mr-4 hover:text-gray-600">
                                     <span>Home</span>
@@ -162,8 +162,8 @@ function Dashboard() {
           </div>
         </div>
 
-        <h1 className="ml-6 text-2xl sm:text-3xl font-semibold mb-2">Dashboard</h1>
-        <div className=" bg-gray-50 p-6 sm:p-8 md:p-10 rounded shadow-md overflow-x-auto max-w-screen mx-6 my-4">
+        <h1 className="ml-5 md:ml-10 text-2xl sm:text-3xl font-semibold mb-2">Dashboard</h1>
+        <div className=" bg-white p-6 sm:p-8 md:p-10 rounded shadow-md overflow-x-auto max-w-screen md:mx-10 mx-5 mt-4">
             <h1 className="text-lg flex font-bold mb-2 ml-1 text-black">
             Submitted Feedback
           </h1>

@@ -70,7 +70,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
 
 
   return (
-    <div className="w-full">
+    <div className="w-full absolute right-0 left-0 top-0">
       <nav className="bg-gray-800 text-white px-4 py-2 rounded mb-6 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between ">
           {/* Logo / Brand */}
