@@ -11,34 +11,46 @@ import { LogOut } from "lucide-react";
 
 
 function Userf() {
+   const [profiles, setProfiles] = useState([]);
  const [feedbacks, setFeedbacks] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [Name, setName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
+  const [email, setEmail] = useState("");
 
-useEffect(() => {
-  const unsubscribe = onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setName(user.displayName || "Anonymous");
-    }
-  });
-  return () => unsubscribe();
-}, []);
- 
-useEffect(() => {
-  const unsubscribe = onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setUserEmail(user.email); 
-    } else {
-      setUserEmail(""); 
-    }
-  });
 
-  return () => unsubscribe(); 
-}, []);
-
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const currentEmail = user.email || "";
+        setEmail(currentEmail);
   
+        // Fetch profile and set name
+        const fetchProfile = async () => {
+          try {
+            const querySnapshot = await getDocs(collection(db, "profiles"));
+            const data = querySnapshot.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
+            setProfiles(data);
+  
+            const matchedProfile = data.find((profile) => profile.email === currentEmail);
+            if (matchedProfile) {
+              setName(matchedProfile.Name);
+            }
+          } catch (error) {
+            console.error("Error fetching profile:", error);
+          }
+        };
+  
+        fetchProfile();
+      }
+    });
+  
+    return () => unsubscribe();
+  }, []);
+
 
  useEffect(() => {
   const fetchFeedbacks = async () => {
@@ -66,7 +78,7 @@ useEffect(() => {
   fetchFeedbacks();
 }, []);
 
-const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
+const userFeedbacks = feedbacks.filter((fb) => fb.email === email);
 
 
   return (
@@ -275,7 +287,7 @@ const userFeedbacks = feedbacks.filter((fb) => fb.email === userEmail);
           </ul>
         )}
       </nav>
-      <div className="flex flex-col md:flex-row w-full gap-4 ">
+      <div className="flex flex-col md:flex-row w-full md:gap-4 ">
   {/* Left Section with Two Gray Boxes */}
   <div className="flex flex-col w-full md:w-1/4 gap-4">
     {/* First Gray Box */} 
